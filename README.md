@@ -1,10 +1,6 @@
 # Weather app - Frontend developer challenge
 
-There was a beautiful idea of building an app that would show the upcoming
-weather. The developers wrote a nice backend and a frontend following the latest
-principles and - to be honest - bells and whistles. However, the developers did not
-have time to finish the frontend. Your task is to continue where they left of or create
-your own frontend.
+There was a beautiful idea of building an app that would show the upcoming weather. The developers wrote a nice backend and a frontend following the latest principles and - to be honest - bells and whistles. However, the developers did not have time to finish the frontend. Your task is to continue where they left of or create your own frontend.
 
 ## Prerequisites
 * Docker and docker-compose installed on your machine
@@ -13,19 +9,16 @@ your own frontend.
 ## Returning your solution
 1. Create a private GitHub or GitLab repository in github. DON’T make it public.
 2. Make changes, commit them, and push them to your own repository.
-3. Create a .zip -package including the .git-directory, but excluding the
-node_modules-directories.
+3. Create a .zip -package including the .git-directory, but excluding the node_modules-directories.
 4. Send us the archive.
 
 ## How to run backend and demo frontend
 1. Go and get API key from openweathermap.org
-2. Open docker-compose.yml file and replace APPID variable value with your
-API key
-3. Run command line command
-docker-compose up -d
+2. Open docker-compose.yml file and replace APPID variable value with your API key
+3. Run command line command `docker-compose up -d`
 4. The service is now up and running!
-a. Backend is now running in http://localhost:9000
-b. And demo frontend in http://localhost:8000
+    - Backend is now running in http://localhost:9000
+    - And demo frontend in http://localhost:8000
 
 ## Exercises
 
