@@ -9,7 +9,7 @@
   "author": "Marko Klemetti <marko.klemetti@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --inline --colors",
+    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js",
     "lint": "node_modules/.bin/eslint --ext .js --ext .jsx ."
   },
   "dependencies": {
@@ -23,14 +23,16 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2016": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "css-loader": "^6.5.1",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.16.0",
-    "html-webpack-plugin": "^2.28.0",
-    "transfer-webpack-plugin": "^0.1.4",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.2"
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.6",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.0.0"
   }
 }

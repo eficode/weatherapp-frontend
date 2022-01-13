@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './public/style.css';
 
 const baseURL = process.env.ENDPOINT || 'http://localhost:9000/api';
 
@@ -33,7 +34,7 @@ class Weather extends React.Component {
   async getWeather() {
     const [weatherData] = await Promise.all([getWeatherFromApi(this.state.location)]);
     if (weatherData) {
-      console.log('Weather data:', weatherData)
+      console.log('Weather data:', weatherData);
       this.setState(
         {
           icon: weatherData.weather[0].icon.slice(0, -1),
@@ -51,9 +52,9 @@ class Weather extends React.Component {
     return (
       <div>
         <div className="icon">
-        <h2>Curent weather in {location}</h2>
-        {icon && <img width={200} height={200} alt="weather_icon" src={`/img/${icon}.svg`} />}
-        {updatedAt && <p>{updatedAt}</p>}
+          <h2>Curent weather in {location}</h2>
+          {icon && <img width={200} height={200} alt="weather_icon" src={`/img/${icon}.svg`} />}
+          {updatedAt && <p>{updatedAt}</p>}
           <button onClick={() => this.getWeather()}>Update</button>
         </div>
       </div>

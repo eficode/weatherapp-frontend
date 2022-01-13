@@ -1,43 +1,50 @@
-const webpack = require('webpack');
+ const webpack = require('webpack');
+ const HtmlWebpackPlugin = require('html-webpack-plugin');
+ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const TransferWebpackPlugin = require('transfer-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+ module.exports = {
+   mode: 'development',
+   entry: '/src/index.jsx',
+   resolve: {
+     extensions: ['.js', '.jsx'],
+   },
+   devServer: {
+     static: {
+       directory: '/src/index.jsx',
+     },
+     hot: true,
+     historyApiFallback: true,
+     port: 8000,
+     host: 'local-ip',
+     allowedHosts: 'all',
+   },
+   devtool: 'eval',
+   output: {
+     filename: 'bundle.js',
+     publicPath: '/',
+   },
+   module: {
+     rules: [
+       {
+         test: /\.(js|jsx)$/,
+         exclude: /node_modules/,
+         use: [{
+           loader: 'babel-loader',
+           options: { presets: ['react', 'es2016'] },
+         }],
+       },
+       {
+         test: /\.css$/i,
+         use: [MiniCssExtractPlugin.loader, 'css-loader'],
+       },
+     ],
+   },
+   plugins: [
+     new HtmlWebpackPlugin({ template: 'src/public/index.html' }),
+     new webpack.DefinePlugin({
+       process: { env: {} },
+     }),
+     new MiniCssExtractPlugin(),
 
-module.exports = {
-  entry: './src/index.jsx',
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  devServer: {
-    contentBase: 'src/public',
-    historyApiFallback: true,
-    port: 8000,
-    host: '0.0.0.0',
-    disableHostCheck: true,
-  },
-  devtool: 'eval',
-  output: {
-    filename: 'index.jsx',
-    publicPath: '/',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: [{
-          loader: 'babel-loader',
-          options: { presets: ['react', 'es2016'] },
-        }],
-      },
-    ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({ template: 'src/public/index.html' }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new TransferWebpackPlugin([
-      { from: 'src/public' },
-    ], '.'),
-  ],
-};
+   ],
+ };
