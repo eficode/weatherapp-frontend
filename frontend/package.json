@@ -15,7 +15,7 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native-geolocation-service": "^3.1.0"
+    "react-native-geolocation-service": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -24,8 +24,8 @@
     "babel-loader": "^8.2.3",
     "babel-preset-es2016": "^6.22.0",
     "css-loader": "^6.5.1",
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb": "^15.0.1",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.16.0",

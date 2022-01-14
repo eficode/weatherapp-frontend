@@ -28,13 +28,17 @@
          test: /\.(js|jsx)$/,
          exclude: /node_modules/,
          use: [{
-            loader: 'babel-loader',
-            options: { presets: ['@babel/preset-react'] },
+           loader: 'babel-loader',
+           options: { presets: ['@babel/preset-react'] },
          }],
        },
        {
          test: /\.css$/i,
          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+       },
+       {
+         test: /\.(png|svg|jpg|jpeg|gif)$/i,
+         type: 'asset/resource',
        },
      ],
    },

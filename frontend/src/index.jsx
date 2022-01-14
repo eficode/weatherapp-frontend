@@ -53,7 +53,7 @@ class Weather extends React.Component {
       <div>
         <div className="icon">
           <h2>Curent weather in {location}</h2>
-          {icon && <img width={200} height={200} alt="weather_icon" src={`/img/${icon}.svg`} />}
+          {icon && <img width={200} height={200} alt="weather_icon" src={require(`./public/img/${icon}.svg`)} />}
           {updatedAt && <p>{updatedAt}</p>}
           <button onClick={() => this.getWeather()}>Update</button>
         </div>
