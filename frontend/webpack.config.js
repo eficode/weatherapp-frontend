@@ -15,8 +15,7 @@
      hot: true,
      historyApiFallback: true,
      port: 8000,
-     host: 'local-ip',
-     allowedHosts: 'all',
+     host: '0.0.0.0',
    },
    devtool: 'eval',
    output: {
@@ -29,8 +28,8 @@
          test: /\.(js|jsx)$/,
          exclude: /node_modules/,
          use: [{
-           loader: 'babel-loader',
-           options: { presets: ['react', 'es2016'] },
+            loader: 'babel-loader',
+            options: { presets: ['@babel/preset-react'] },
          }],
        },
        {
