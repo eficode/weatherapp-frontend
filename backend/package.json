@@ -10,21 +10,22 @@
     "lint": "eslint src/*.js"
   },
   "dependencies": {
-    "debug": "^2.6.3",
-    "kcors": "^2.2.1",
-    "koa": "^2.2.0",
+    "debug": "^4.3.3",
+    "kcors": "^2.2.2",
+    "koa": "^2.13.4",
     "koa-json": "^2.0.2",
-    "koa-router": "^7.2.0",
-    "node-fetch": "^1.6.3"
+    "koa-router": "^10.1.1",
+    "node-fetch": "^3.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.4.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-node": "^5.0.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "nodemon": "^1.8.1"
-  }
+    "eslint": "^8.6.0",
+    "eslint-config-standard": "^15.0.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "type": "module"
 }

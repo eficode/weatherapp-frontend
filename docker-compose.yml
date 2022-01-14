@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.8'
 services:
     backend:
         image: weatherapp_backend:latest
@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile.backend
             context: ./backend
         environment:
-            APPID: "<your api key here>"
+            APPID: "< api key here >"
             MAP_ENDPOINT: "http://api.openweathermap.org/data/2.5"
             TARGET_CITY: "Helsinki,fi"
         ports:
