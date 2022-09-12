@@ -7,7 +7,7 @@ There was a beautiful idea of building an app that would show the upcoming weath
 * An openweathermap API key (by default it is set in docker-compose.yml) 
 
 ## Returning your solution
-1. Create a private GitHub or GitLab repository in github. DON’T make it public.
+1. Create a private GitHub or GitLab repository. DON’T make it public.
 2. Make changes, commit them, and push them to your own repository.
 3. Create a .zip -package including the .git-directory, but excluding the node_modules-directories.
 4. Send us the archive.
